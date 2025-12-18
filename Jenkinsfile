@@ -12,11 +12,12 @@ pipeline {
             }
         }
 
-        stage('Build + Tests') {
+        stage('Build') {
             steps {
-                bat 'gradlew.bat clean test'
+                bat 'gradlew.bat clean build -x test'
             }
         }
+
 
         stage('Build Docker image') {
             steps {

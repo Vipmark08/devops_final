@@ -17,7 +17,8 @@ public class Task {
     private Long id;
 
     @Column(nullable = false)
-    private String title;
+    private String title = "todo-title";
+
 
     private String description;
 

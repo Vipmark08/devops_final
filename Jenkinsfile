@@ -28,7 +28,8 @@ pipeline {
         stage('Run container') {
             steps {
                 bat 'docker rm -f devopsfinal-container || exit /b 0'
-                bat 'docker run -d --name devopsfinal-container -p 8080:8080 devopsfinal:1.0'
+                bat 'docker run -d --name devopsfinal-container -p 8081:8080 devopsfinal:1.0'
+
             }
         }
     }
